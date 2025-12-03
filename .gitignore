@@ -1,0 +1,15 @@
+# --- Python (Backend) ---
+.venv/
+__pycache__/
+*.py[cod]
+
+# --- Node/React (Frontend) ---
+forever-buddy-ui/node_modules/
+forever-buddy-ui/dist/
+.DS_Store
+
+# --- Сигурност (МНОГО ВАЖНО!) ---
+.env
+
+# --- Други ---
+.vscode/
