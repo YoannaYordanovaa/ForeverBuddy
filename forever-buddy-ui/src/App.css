@@ -19,10 +19,7 @@ body {
 }
 
 .chat-header {
-background: #6d348370;
-background: linear-gradient(270deg, rgba(109, 52, 131, 0.800) 21%, rgba(255, 209, 103,0.800) 100%);
-  color: white;
-  padding: 0.2rem;
+background: #2E0A47;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
@@ -74,10 +71,10 @@ background: linear-gradient(270deg, rgba(109, 52, 131, 0.800) 21%, rgba(255, 209
 }
 
 .bubble.user {
-  background: #ffd167; 
-  color: #333;
+  background: #6A0DAD; 
+  color: #ffffffff;
   border-bottom-right-radius: 2px;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .bubble.bot {
@@ -90,8 +87,8 @@ background: linear-gradient(270deg, rgba(109, 52, 131, 0.800) 21%, rgba(255, 209
 .bubble p { margin-bottom: 8px; }
 .bubble p:last-child { margin-bottom: 0; }
 .bubble ul, .bubble ol { margin-left: 20px; margin-bottom: 8px; }
-.bubble strong { color: #6D3483; font-weight: 700;}
-.bubble em {color: #FFD167; font-style: normal; font-weight: 700;}
+.bubble strong { color: #6A0DAD; font-weight: 600;}
+.bubble em {color: #FFC300; font-style: normal; font-weight: 600;}
 
 .input-area {
   padding: 20px;
@@ -104,7 +101,7 @@ background: linear-gradient(270deg, rgba(109, 52, 131, 0.800) 21%, rgba(255, 209
 .input-wrapper {
   display: flex;
   gap: 10px;
-  background: #f0f2f5;
+  background: #f3f3f3ff;
   padding: 10px;
   border-radius: 30px;
 }
@@ -117,7 +114,7 @@ input {
   font-size: 16px;
   outline: none;
   color: #333;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 input:focus::placeholder {
@@ -125,7 +122,7 @@ input:focus::placeholder {
 }
 
 button {
-  background: #6d3483;
+  background: #6A0DAD;
   color: white;
   border: none;
   border-radius: 50%;
@@ -140,7 +137,7 @@ button {
 
 }
 
-button:hover { background: #6d3483; }
+button:hover { background: #6A0DAD; }
 button:disabled { background: #ccc; cursor: default; }
 
 .typing span {
@@ -170,7 +167,7 @@ button:disabled { background: #ccc; cursor: default; }
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #6D3483;
+  background-color: #6A0DAD;
 }
 
 

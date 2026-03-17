@@ -45,7 +45,7 @@ function App() {
       if (userText.toLowerCase().startsWith('/learn ') || userText.toLowerCase().startsWith('/запомни ')) {
         
         const fact = userText.replace(/^\/(learn|запомни)\s+/i, '');
-        const response = await fetch('http://localhost:8000/learn', {
+        const response = await fetch('https://foreverbuddy.onrender.com/learn', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ text: fact }),
@@ -61,7 +61,7 @@ function App() {
       } else if (userText.toLowerCase().startsWith('/forget ') || userText.toLowerCase().startsWith('/забрави ')) {
         
         const fact = userText.replace(/^\/(forget|забрави)\s+/i, '');
-        const response = await fetch('http://localhost:8000/forget', {
+        const response = await fetch('https://foreverbuddy.onrender.com/forget', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ text: fact }),
@@ -84,7 +84,7 @@ function App() {
         // 1. Създаваме ПРАЗНО балонче за бота веднага
         setMessages((prev) => [...prev, { sender: 'bot', text: '' }]);
 
-        const response = await fetch('http://localhost:8000/chat', {
+        const response = await fetch('https://foreverbuddy.onrender.com/chat', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ question: userText, history: history }),
