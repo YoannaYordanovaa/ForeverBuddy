@@ -1,3 +1,11 @@
+import sys
+
+# Windows UTF-8 fix
+if sys.stdout.encoding and sys.stdout.encoding.lower() != 'utf-8':
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+if sys.stderr.encoding and sys.stderr.encoding.lower() != 'utf-8':
+    sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+
 import os
 import shutil
 from dotenv import load_dotenv
@@ -13,8 +21,10 @@ if not os.getenv("OPENAI_API_KEY"):
     exit()
 
 # Конфигурация
-DATA_PATH = "output_md"   # Чете
-DB_PATH = "chroma_db"     # Записва
+DATA_PATH = "output_md"
+# При rebuild от сървъра се пише в chroma_db_rebuild, не в chroma_db
+# (избягва Windows file lock върху активната база)
+DB_PATH = os.environ.get("CHROMA_DB_PATH", "chroma_db")
 
 def create_vector_db():
     print("Създаване на базата данни...")
