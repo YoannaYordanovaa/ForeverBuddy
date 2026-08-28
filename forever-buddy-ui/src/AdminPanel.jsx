@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import BrandLogo from "./BrandLogo";
 import "./AdminPanel.css";
 
 const API = "";
@@ -190,8 +191,7 @@ export default function AdminPanel() {
     <div className="admin-wrap">
       <header className="admin-header">
         <div className="admin-header-left">
-          <span className="admin-logo-p1">Forever</span>
-          <span className="admin-logo-p2">Buddy</span>
+          <BrandLogo />
           <span className="admin-header-title">Административен панел</span>
         </div>
         <div className="admin-header-right">

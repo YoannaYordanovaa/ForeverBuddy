@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import ReactMarkdown from "react-markdown";
+import BrandLogo from "./BrandLogo";
 import "./App.css";
 
 const STORAGE_KEY = "foreverbuddy_conversations";
@@ -336,10 +337,7 @@ export default function App() {
     <div className="app-container">
       <aside className={`sidebar ${sidebarOpen ? "open" : "closed"}`}>
         <div className="sidebar-header">
-          <div className="sidebar-logo">
-            <strong style={{ color: "#fff" }}>{config.namePart1}</strong>
-            <strong style={{ color: config.accentColor }}>{config.namePart2}</strong>
-          </div>
+          <BrandLogo namePart1={config.namePart1} namePart2={config.namePart2} accentColor={config.accentColor} />
           <button
             className="sidebar-toggle-btn"
             onClick={() => setSidebarOpen(false)}

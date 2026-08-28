@@ -55,11 +55,6 @@ body {
   flex-shrink: 0;
 }
 
-.sidebar-logo {
-  font-size: 16px;
-  white-space: nowrap;
-}
-
 .sidebar-toggle-btn {
   background: transparent;
   border: none;
