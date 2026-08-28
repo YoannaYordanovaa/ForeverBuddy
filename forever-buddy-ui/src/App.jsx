@@ -108,7 +108,7 @@ export default function App() {
 
   // Зареждаме конфигурацията от сървъра при стартиране
   React.useEffect(() => {
-    fetch("http://localhost:8000/config")
+    fetch("/config")
       .then((r) => r.json())
       .then((data) => setConfig({ ...DEFAULT_CONFIG, ...data }))
       .catch(() => {}); // При грешка използваме DEFAULT_CONFIG
@@ -233,7 +233,7 @@ export default function App() {
           userText.toLowerCase().startsWith("/запомни ")
         ) {
           const fact = userText.replace(/^\/(learn|запомни)\s+/i, "");
-          const res = await fetch("http://localhost:8000/learn", {
+          const res = await fetch("/learn", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ text: fact }),
@@ -251,7 +251,7 @@ export default function App() {
           userText.toLowerCase().startsWith("/забрави ")
         ) {
           const fact = userText.replace(/^\/(forget|забрави)\s+/i, "");
-          const res = await fetch("http://localhost:8000/forget", {
+          const res = await fetch("/forget", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ text: fact }),
@@ -273,7 +273,7 @@ export default function App() {
             messages: [...conv.messages, { sender: "bot", text: "" }],
           }));
 
-          const response = await fetch("http://localhost:8000/chat", {
+          const response = await fetch("/chat", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ question: userText, history }),

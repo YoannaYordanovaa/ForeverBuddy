@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./AdminPanel.css";
 
-const API = "http://localhost:8000";
+const API = "";
 
 export default function AdminPanel() {
   const [password, setPassword] = useState("");
