@@ -33,6 +33,8 @@ body {
   margin-bottom: 28px;
 }
 
+.admin-logo-p1 { font-size: 22px; font-weight: 700; color: #6A0DAD; }
+.admin-logo-p2 { font-size: 22px; font-weight: 700; color: #FFC300; }
 .admin-login-sub {
   display: block;
   font-size: 13px;
