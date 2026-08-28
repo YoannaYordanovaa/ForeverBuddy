@@ -69,9 +69,14 @@ DISCLAIMER = (
 # ── ПРОДУКТОВИ СИНОНИМИ БГ → EN ──────────────────────────────
 # Използват се от промпта за по-добро семантично търсене
 # ── АДМИНИСТРАТОРСКА ПАРОЛА ──────────────────────────────────
-# Сменете с силна парола преди deployment!
-# НИКОГА не качвайте реалната парола в публично хранилище.
-ADMIN_PASSWORD = "admin1234"
+# Паролата се задава в .env (ADMIN_PASSWORD=...), не тук — за да не
+# се качва в git хранилището.
+import os as _os
+from dotenv import load_dotenv as _load_dotenv
+_load_dotenv()
+ADMIN_PASSWORD = _os.getenv("ADMIN_PASSWORD")
+if not ADMIN_PASSWORD:
+    raise RuntimeError("Липсва ADMIN_PASSWORD в .env файла.")
 
 PRODUCT_SYNONYMS = {
     "суха кожа":          "Hydrating Serum, Replenishing Skin Oil, Deep Moisturizing Cream, Aloe Vera Gelly",
