@@ -393,7 +393,7 @@ export default function App() {
               ☰
             </button>
           )}
-          <img src="/Logo.png" alt="Logo" className="logo-img" />
+          <img src="/Logo.svg" alt="Logo" className="logo-img" />
         </header>
 
         <div className="chat-window">

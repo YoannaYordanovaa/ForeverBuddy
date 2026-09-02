@@ -5,11 +5,18 @@
   font-weight: 400;
 }
 
+html {
+  height: 100%;
+  overscroll-behavior: none;
+}
+
 body {
   margin: 0;
   padding: 0;
   min-width: 320px;
   min-height: 100vh;
+  min-height: 100dvh;
+  overscroll-behavior: none;
 }
 
 /* ВАЖНО: Това премахва ограничението на ширината, което Vite слага по подразбиране */

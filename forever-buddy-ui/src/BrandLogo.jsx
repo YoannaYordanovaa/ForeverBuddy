@@ -7,8 +7,8 @@ export default function BrandLogo({
 }) {
   return (
     <div style={{ fontSize: 16, whiteSpace: "nowrap" }}>
-      <strong style={{ color: "#fff" }}>{namePart1}</strong>
-      <strong style={{ color: accentColor }}>{namePart2}</strong>
+      <strong style={{ color: "#fff", fontWeight: 600 }}>{namePart1}</strong>
+      <strong style={{ color: accentColor, fontWeight: 600 }}>{namePart2}</strong>
     </div>
   );
 }

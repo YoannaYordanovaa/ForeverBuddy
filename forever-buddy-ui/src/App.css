@@ -8,12 +8,14 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: #eef2f3;
   height: 100vh;
+  height: 100dvh;
   overflow: hidden;
 }
 
 .app-container {
   display: flex;
   height: 100vh;
+  height: 100dvh;
   width: 100vw;
   overflow: hidden;
   background: white;
@@ -196,7 +198,7 @@ body {
 .sidebar-open-btn:hover { color: white; background: rgba(255, 255, 255, 0.1); }
 
 .logo-img {
-  height: 6rem;
+  height: 5rem;
   width: auto;
   object-fit: contain;
 }
@@ -471,6 +473,7 @@ button.send-btn:disabled { background: #ccc; cursor: default; }
     top: 0;
     left: 0;
     height: 100vh;
+    height: 100dvh;
     z-index: 100;
     width: 280px;
     min-width: 280px;
